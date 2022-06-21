@@ -1,0 +1,117 @@
+@media (max-width: 999px) {
+  .navbar {
+    .hamburger {
+      display: block !important;
+    }
+
+    .navbar-nav {
+      width: 100%;
+      height: calc(100vh - 100px);
+      position: absolute;
+      padding: 20px 15px;
+      background-color: #7a559a;
+      z-index: 99;
+      top: 100px;
+      right: -100%;
+      flex-direction: column !important;
+      justify-content: flex-start;
+      align-items: flex-start;
+      align-content: flex-start;
+      transition: all .3s linear;
+
+      &.active-nav {
+        right: 0px;
+      }
+
+      li {
+        width: 100%;
+        margin: 0px !important;
+        padding: 10px 0px;
+        border-bottom: 1px solid rgba($color: #fff, $alpha: 0.3);
+
+        &:last-child {
+          border-bottom: 0px !important;
+        }
+
+        a {
+          width: 100%;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: url('../images/logo.png') bottom left / contain no-repeat;
+        opacity: .1;
+        z-index: -1;
+        bottom: 100px;
+        left: 20px;
+      }
+    }
+
+    .brand-name img {
+      object-position: left !important;
+    }
+
+    &.scrolled {
+      .navbar-nav {
+        top: 80px;
+        height: calc(100vh - 80px);
+      }
+    }
+  }
+
+  header {
+    .item {
+      padding: 200px 0px 100px 0px !important;
+      background-position: bottom !important;
+      
+      &::after {
+        width: 100% !important;
+        clip-path: none !important;
+      }
+    }
+  }
+
+  .about-us {
+    padding-top: 50px !important;
+
+    .image-content {
+      height: 400px !important;
+    }
+  }
+
+  .order-mobile-1 {
+    order: 1 !important;
+  }
+
+  .order-mobile-0 {
+    order: 0 !important;
+  }
+
+  .features {
+    padding-top: 40px !important;
+
+    &::after {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 71%);
+    }
+
+    .image-content {
+      height: 350px !important;
+    }
+  }
+
+  .offers {
+    padding-top: 0px !important;
+
+    .box.large-img {
+      height: 230px !important;
+    }
+  }
+
+  footer .content p {
+    margin-top: 0px !important;
+  }
+}
