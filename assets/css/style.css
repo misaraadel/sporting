@@ -1526,14 +1526,14 @@ header .owl-theme .owl-dots .owl-dot span:hover, header .owl-theme .owl-dots .ow
   background-color: #7a559a;
   top: 0;
   left: 0;
-  -webkit-clip-path: polygon(0 0, 100% 24%, 100% 100%, 0 71%);
-          clip-path: polygon(0 0, 100% 24%, 100% 100%, 0 71%);
+  -webkit-clip-path: polygon(0 0, 100% 22%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 22%, 100% 100%, 0% 100%);
   z-index: -1;
 }
 
 .features .image-content {
   width: 100%;
-  height: 600px;
+  height: 500px;
 }
 
 .features .image-content img {
@@ -1541,8 +1541,8 @@ header .owl-theme .owl-dots .owl-dot span:hover, header .owl-theme .owl-dots .ow
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: top right;
-     object-position: top right;
+  -o-object-position: bottom right;
+     object-position: bottom right;
 }
 
 .features .content {
@@ -1753,6 +1753,318 @@ header .owl-theme .owl-dots .owl-dot span:hover, header .owl-theme .owl-dots .ow
 .offers .box:hover img {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
+}
+
+.form-contain {
+  width: 100%;
+}
+
+.form-contain .custom-btn {
+  width: 100% !important;
+}
+
+.form-contain .form-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-contain .form-group label {
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-contain .form-group .form-input {
+  width: 100%;
+  height: 47px;
+}
+
+.form-contain .form-group .form-input.select-input {
+  position: relative;
+  z-index: 9;
+}
+
+.form-contain .form-group .form-input.select-input::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url("../images/arrow_down.svg") center/contain no-repeat;
+  top: calc(50% - 10px);
+  left: 13px;
+  z-index: 0;
+}
+
+.form-contain .form-group .form-input.history {
+  position: relative;
+  z-index: 9;
+}
+
+.form-contain .form-group .form-input.history::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url("../images/parts/calendar.svg") center/contain no-repeat;
+  top: calc(50% - 10px);
+  left: 13px;
+  z-index: 0;
+}
+
+.form-contain .form-group .form-input.history .form-control {
+  color: #909090 !important;
+  text-align: right !important;
+}
+
+.form-contain .form-group .form-input.history input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+.form-contain .form-group .form-input.show_hide_password {
+  position: relative;
+}
+
+.form-contain .form-group .form-input.show_hide_password .show_pass {
+  font-size: 18px;
+  color: #909090;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 20px;
+  cursor: pointer;
+}
+
+.form-contain .form-group .form-input.show_hide_password .show_pass:hover {
+  color: #7a559a;
+}
+
+.form-contain .form-group .form-input .form-control {
+  background-color: #fff;
+  border: 1px solid rgba(0, 93, 99, 0.1);
+  padding: 0px 20px;
+  height: 100%;
+  width: 100%;
+  color: #7a559a;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 24px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  resize: none;
+}
+
+.form-contain .form-group .form-input .form-control::-webkit-input-placeholder {
+  color: #909090;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.form-contain .form-group .form-input .form-control:-ms-input-placeholder {
+  color: #909090;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.form-contain .form-group .form-input .form-control::-ms-input-placeholder {
+  color: #909090;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.form-contain .form-group .form-input .form-control::placeholder {
+  color: #909090;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.form-contain .form-group .form-input .form-control:focus, .form-contain .form-group .form-input .form-control:hover {
+  background-color: rgba(0, 93, 99, 0.06);
+}
+
+.form-contain .form-group .form-input.text-area {
+  height: 100px;
+}
+
+.form-contain .form-group .form-input.text-area .form-control {
+  padding: 14px 15px !important;
+  border-radius: 15px !important;
+}
+
+.form-contain .form-group .form-input.text-area .form-control:hover, .form-contain .form-group .form-input.text-area .form-control:focus {
+  background-color: #fff !important;
+}
+
+.form-contain .file-upload {
+  width: 224px;
+  height: 150px;
+}
+
+.form-contain .file-upload input[type="file"] {
+  display: none;
+}
+
+.form-contain .file-upload .file-upload-section {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  background: rgba(213, 185, 139, 0.1);
+  border: 1px solid rgba(0, 93, 99, 0.1);
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.form-contain .file-upload .file-upload-section img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.form-contain .file-upload .file-upload-section h2 {
+  color: #909090;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 15px 0px;
+}
+
+.form-contain .file-upload .file-upload-section p {
+  color: #7a559a;
+  font-size: 11px;
+  font-weight: 500;
+  margin: 0px;
+}
+
+.form-contain .file-upload .file-upload-section:hover img {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.form-contain .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  cursor: pointer;
+}
+
+.form-contain .wrapper .radio-title {
+  margin: 0px !important;
+  width: calc(100% - 25px);
+}
+
+.form-contain .wrapper .radio-check {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #7a559a;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  -webkit-margin-end: 10px;
+          margin-inline-end: 10px;
+}
+
+.form-contain .wrapper .radio-check.squre-check {
+  border-radius: 4px !important;
+}
+
+.form-contain .wrapper .radio-check.squre-check::after {
+  border-radius: 4px !important;
+}
+
+.form-contain .wrapper .radio-check::after {
+  content: '\f00c';
+  width: 100%;
+  height: 100%;
+  background-color: #7a559a;
+  border-radius: 50%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 12px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all .4s linear;
+  transition: all .4s linear;
+  top: 0;
+  left: 0;
+}
+
+.form-contain .wrapper .radio-check:checked {
+  border: 0px !important;
+}
+
+.form-contain .wrapper .radio-check:checked::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.form-contain .wrapper .radio-title {
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.form-contain .wrapper:hover .radio-title {
+  color: #7a559a;
 }
 
 footer {
