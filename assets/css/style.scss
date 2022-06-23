@@ -480,6 +480,17 @@ header {
 .form-contain {
   width: 100%;
 
+  .heading {
+    text-align: unset !important;
+
+    p {
+      color: #909090;
+      font-size: 15px;
+      font-weight: 500;
+      margin-top: 10px;
+    }
+  }
+
   .custom-btn {
     width: 100% !important;
   }
@@ -669,67 +680,129 @@ header {
     }
 
     .radio-check{
-      appearance: none;
-      -webkit-appearance: none;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      border: 1px solid #7a559a;
-      background-color: #fff;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      margin-inline-end: 10px;
+      display: none;
 
-      &.squre-check {
-        border-radius: 4px !important;
-
-        &::after {
-          border-radius: 4px !important;
-        }
-      }
-
-      &::after{
-        content: '\f00c';
-        width: 100%;
-        height: 100%;
-        background-color: #7a559a;
-        border-radius: 50%;
-        color: #fff;
-        display: flex;
-        position: absolute;
-        top: 0;
-        left: 0;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        font-size: 12px;
-        transform: scale(0);
-        transition: all .4s linear;
-        top: 0;
-        left: 0;
-      }
-
-      &:checked{
-        border: 0px !important;
-
-        &::after{
-          transform: scale(1);
+      &:checked {
+        &~ .radio-title {
+          border-color: rgba($color: #7a559a, $alpha: 1.0);
         }
       }
     }
 
     .radio-title{
-      color: #000;
-      font-size: 14px;
-      font-weight: 500;
+      width: 100%;
+      overflow: hidden;
+      padding-bottom: 5px !important;
+      border-radius: 10px;
       cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      border: 1px solid rgba($color: #7a559a, $alpha: 0.5);
+
+      .man {
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+        object-position: center;
+        margin-bottom: 10px;
+      }
+
+      span {
+        color: #000;
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .head {
+        width: 100%;
+        padding: 20px 10px;
+        background-color: #7a559a;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .logo {
+        width: 100%;
+        height: 150px;
+        object-fit: contain;
+        object-position: center;
+        margin: 20px 0px;
+        display: none;
+      }
+
+      .list {
+        width: 100%;
+        padding: 0px 10px;
+
+        li {
+          padding-inline-start: 20px;
+          color: #131313;
+          font-size: 15px;
+          font-weight: 500;
+          margin-bottom: 15px;
+          position: relative;
+
+          &::after {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: #7a559a;
+            border-radius: 4px;
+            transform: rotate(45deg);
+            right: 0px;
+            top: calc(50% - 7.5px);
+          }
+        }
+      }
+
+      .flex-price {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        padding: 0px 15px;
+
+        .before {
+          font-size: 18px;
+          font-weight: 500;
+          text-decoration: line-through;
+          color: #909090;
+          margin: 0px;
+        }
+
+        .after {
+          font-size: 18px;
+          font-weight: 500;
+          color: #000;
+          margin: 0px;
+        }
+      }
+
+      .desc {
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+        color: #000;
+        margin: 15px 0px 7px 0px; 
+      }
+
+      b {
+        font-size: 18px;
+        font-weight: 700;
+        color: #7a559a;
+      }
     }
 
     &:hover {
